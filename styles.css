@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.loading_image {
+    width: 8%;
+}
+
+#weather_icon {
+    display: block;
+    margin: auto;
+    width: 6em;
+}

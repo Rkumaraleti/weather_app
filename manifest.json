@@ -1,0 +1,11 @@
+{
+    "name": "Weather App",
+    "version": "1.0.0",
+    "description": "Check Weather of any Location",
+    "manifest_version": 3,
+    "author": "Renuka Kumar Aleti",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Weather App"
+    }
+}

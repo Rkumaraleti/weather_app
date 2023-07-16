@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RK Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/13a52a8953.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container w-25 text-center border rounded mt-3">
+      <h1 class="fw-bold text-light bg-dark rounded mt-2 py-1">Weather App</h1>
+      <div class="text-center pt-1">
+        <i class="fa-solid fa-location-dot fa-xl"></i>
+        <input
+          type="text"
+          class="border border-dark rounded w-75 p-1"
+          id="city_input"
+          placeholder="Enter City Name"
+        />
+      </div>
+      <div id="loader">
+        <img src="./Eclipse-1s-200px.png" class="loading_image" alt="" />
+      </div>
+      <div>
+        <img src="" id="weather_icon" />
+        <h3 id="demo" class="display-5 border rounded bg-info text-light"></h3>
+        <h6><span id="feels_like"></span><span id="humidity"></span></h6>
+        <button
+          type="submit"
+          class="btn btn-outline-primary btn-block w-100 run_btn mb-2"
+          id="run"
+        >
+          Run
+        </button>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+
+    <!-- BootStrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
