@@ -17,6 +17,7 @@ const run_btn = document.querySelector(".run_btn");
 const weather_icon = document.querySelector("#weather_icon");
 const city_input = document.querySelector("#city_input");
 const weather_logo = document.querySelector("#weather_icon");
+const user_location = document.querySelector("#location");
 
 // Event Listener
 run_btn.addEventListener("click", () => {
@@ -58,10 +59,16 @@ async function weatherFetch() {
 }
 
 async function customWeatherFetch() {
+    if (city_input.value === "") {
+        getLocation();
+        user_location.innerHTML = `Current Location:`
+        return;
+    }
     loader.style.display = "block";
     weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_input.value}&units=metric&appid=${weather_api_key}`);
     loader.style.display = "none";
     data = await weatherResponse.json();
+    user_location.innerHTML = `Location: ${city_input.value}`;
     h1.innerHTML = data.main.temp + " °C";
     feelsLike.innerHTML = "Feels Like: " +data.main.feels_like + " °C | ";
     humidity.innerHTML = "Humidity: " + data.main.humidity + "%";
