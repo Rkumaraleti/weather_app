@@ -19,33 +19,53 @@
     ></script>
   </head>
   <body>
-    <div class="container w-25 text-center border rounded mt-3">
-      <h1 class="fw-bold text-light bg-dark rounded mt-2 py-1">Weather App</h1>
-      <div class="text-center pt-1">
-        <i class="fa-solid fa-location-dot fa-xl"></i>
-        <input
-          type="text"
-          class="border border-dark rounded w-75 p-1"
-          id="city_input"
-          placeholder="Enter City Name"
-        />
-      </div>
-      <div id="loader">
-        <img src="./Eclipse-1s-200px.png" class="loading_image" alt="" />
-      </div>
-      <div>
-        <img src="" id="weather_icon" />
-        <h3 id="demo" class="display-5 border rounded bg-info text-light"></h3>
-        <h6><span id="feels_like"></span><span id="humidity"></span></h6>
-        <button
-          type="submit"
-          class="btn btn-outline-primary btn-block w-100 run_btn mb-2"
-          id="run"
-        >
-          Run
-        </button>
-      </div>
-    </div>
+    <table class="container w-100 text-center border rounded mt-3">
+      <tr>
+        <td>
+          <h1 class="fw-bold text-light bg-dark rounded mt-2 py-1">
+            Weather App
+          </h1>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="text-center pt-1">
+            <i class="fa-solid fa-location-dot fa-xl"></i>
+            <input
+              type="text"
+              class="border border-dark rounded w-75 p-1"
+              id="city_input"
+              placeholder="Enter City Name"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="loader">
+            <img src="./Eclipse-1s-200px.png" class="loading_image" alt="" />
+          </div>
+          <div>
+            <img src="" id="weather_icon" />
+            <h6 id="location">Current Location:</h6>
+            <h3
+              id="demo"
+              class="display-5 border rounded bg-info text-light"
+            ></h3>
+            <h6><span id="feels_like"></span><span id="humidity"></span></h6>
+            <button
+              type="submit"
+              class="btn btn-outline-primary btn-block w-100 run_btn mb-2"
+              id="run"
+            >
+              Run
+            </button>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- <div class="container w-25 text-center border rounded mt-3"></div> -->
 
     <!-- Script -->
     <script src="app.js"></script>
